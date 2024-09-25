@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Image</title>
     <style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-</style>
         body {
             display: flex;
             justify-content: center;
@@ -26,9 +13,22 @@
             margin: 0;
             background-color: #f0f0f0;
         }
+        .image-container {
+            width: 100%;
+            max-width: 800px; /* Ajuste selon la taille souhaitée */
+            height: 600px; /* Ajuste la hauteur selon tes besoins */
+            overflow: hidden;
+        }
+        img {
+            width: 100%; /* S'adapte à la largeur du conteneur */
+            height: 100%; /* Remplit le conteneur */
+            object-fit: cover; /* Remplit tout l'espace tout en gardant les proportions */
+        }
     </style>
 </head>
 <body>
-    <img src="https://github.com/BrandonTheQueen/Image1/blob/main/IMG_5767.jpg?raw=true" alt="Description de l'image">
+    <div class="image-container">
+        <img src="URL_DE_TA_IMAGE" alt="Description de l'image">
+    </div>
 </body>
 </html>
